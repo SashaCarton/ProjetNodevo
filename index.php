@@ -1,68 +1,17 @@
 <?php
         session_start();
 
-    function affichage($mannequin){
-        echo $mannequin["nom"] . " ";
-        echo $mannequin["prenom"];
-        echo "<br>";
-        echo $mannequin["age"] . " ans". " " ;
-        echo "<br>";
-        echo $mannequin["taille"] . " m". "   "." " ;
-        echo "<br>";
-        echo $mannequin["poids"] . " kg". " ";
-        echo "<br>";
-        echo $mannequin["sexe"]. " ";
-        echo "<br>";
-        echo $mannequin["ville"] . " ";
+    
+
+    $json = file_get_contents('mannequins.json');
+    $tab = json_decode($json, true);
+    
+    function affichage($id){
+        global $tab;
+
+        echo $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] .'<br>'. ' ' . $tab[$id]['age'] . ' '.'ans' .'<br>'. $tab[$id]['taille'] .'m'. '<br> ' . $tab[$id]['poids'] .'kg' .'<br>'.' ' . $tab[$id]['sexe'] .' <br>'. ' ' . $tab[$id]['ville'];
     }
-
-    $lea = [
-        "nom" => "Léa",
-        "prenom" => "Dupont",
-        "age" => 25,
-        "taille" => 1.75,
-        "poids" => 55,
-        "sexe" => "femme",
-        "ville" => "Paris",
-    ];
-
-    $john = [
-        "nom" => "John",
-        "prenom" => "Smith",
-        "age" => 30,
-        "taille" => 1.85,
-        "poids" => 75,
-        "sexe" => "homme",
-        "ville" => "New York",
-    ];
-
-    $marie = [
-        "nom" => "Marie",
-        "prenom" => "Martin",
-        "age" => 28,
-        "taille" => 1.68,
-        "poids" => 60,
-        "sexe" => "femme",
-        "ville" => "Paris",
-    ];
-    $lise = [
-        "nom" => "",
-        "prenom" => "Lise",
-        "age" => 25,
-        "taille" => 1.75,
-        "poids" => 55,
-        "sexe" => "femme",
-        "ville" => "Paris",
-    ];
-    $milan = [
-        "nom" => "Milan",
-        "prenom" => "Milan",
-        "age" => 30,
-        "taille" => 1.85,
-        "poids" => 75,
-        "sexe" => "homme",
-        "ville" => "New York",
-    ];
+    
 
     
 ?>
@@ -109,11 +58,11 @@
             <div class="PicHome">
             <div>
                     <img src="images/image.png" alt="">
-                    <p><?php affichage($lea) ?></p>
+                    <p><?php affichage('mannequin666073e9056eb') ?></p>
                 </div>
                 <div>
                 <img src="images/image copy.png" alt="">
-                <p class="right" ><?php affichage($marie) ?></p>
+                <p class="right" ><?php affichage('mannequin66607737d92d1') ?></p>
                 </div>
             </div>
         </div>
@@ -121,26 +70,17 @@
             <h2 id="women">Women</h2>
             <div class="trait"></div>
             <div class="navPic">
-                <div>
-                    <img src="images/image.png" alt="">
-                    <p><?php affichage($lea) ?></p>
-                </div>
-                <div>
-                    <img src="images/image copy.png" alt="">
-                    <p><?php affichage($marie) ?></p>
-                </div>
-                <div>
-                    <img src="images/image copy 3.png" alt="">
-                    <p><?php affichage($lise) ?></p>
-                </div>
-                <div>
-                    <img src="images/image.png" alt="">
-                    <p><?php affichage($lea) ?></p>
-                </div>
-                <div>
-                    <img src="images/image.png" alt="">
-                    <p><?php affichage($lea) ?></p>
-                </div>
+                 <?php 
+                    foreach($tab as $mannequin){
+                        if($mannequin['sexe'] === 'femme'){
+                            echo '<div>
+                            <img src="images/image.png" alt="">
+                            <p>'. $mannequin['nom'] . ' ' . $mannequin['prenom'] .'<br>'. ' ' . $mannequin['age'] . ' '.'ans' .'<br>'. $mannequin['taille'] .'m'. '<br> ' . $mannequin['poids'] .'kg' .'<br>'.' ' . $mannequin['sexe'] .' <br>'. ' ' . $mannequin['ville'] .'</p>
+                        </div>';
+                        }
+                    }
+                 ?>
+
             </div>
             <div class="trait"></div>
         </div>
@@ -148,17 +88,23 @@
             <h2>Men</h2>
             <div class="trait"></div>
             <div class="navPic">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
-                <img src="images/image copy 2.png" alt="">
+            <?php 
+                    foreach($tab as $mannequin){
+                        if($mannequin['sexe'] === 'homme'){
+                            echo '<div>
+                            <img src="images/image copy 2.png" alt="">
+                            <p>'. $mannequin['nom'] . ' ' . $mannequin['prenom'] .'<br>'. ' ' . $mannequin['age'] . ' '.'ans' .'<br>'. $mannequin['taille'] .'m'. '<br> ' . $mannequin['poids'] .'kg' .'<br>'.' ' . $mannequin['sexe'] .' <br>'. ' ' . $mannequin['ville'] .'</p>
+                        </div>';
+                        }
+                    }
+                 ?>
             </div>
             <div class="trait"></div>
         </div>
     </div>
+    <script>
+        
+    </script>
+    <?php var_dump($tab[mannequin666073e9056eb] ); ?>
 </body>
 </html>

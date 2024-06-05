@@ -52,6 +52,8 @@
         </select>
         <button type="submit" name="submit">Ajouter</button>
         <a href="index.php">Retour</a>
+        <a href="modif.php">Modifier</a>
+    </form>
         
 </body>
 </html>

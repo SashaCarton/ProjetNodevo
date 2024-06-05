@@ -1,0 +1,22 @@
+{
+    "mannequin666080e91bdcd": {
+        "id": "mannequin666080e91bdcd",
+        "nom": "carton",
+        "prenom": "sasha",
+        "age": "19",
+        "taille": "1.80",
+        "poids": "55",
+        "sexe": "homme",
+        "ville": "senlis"
+    },
+    "mannequin666080f08c44f": {
+        "id": "mannequin666080f08c44f",
+        "nom": "carton",
+        "prenom": "sasha",
+        "age": "19",
+        "taille": "1.80",
+        "poids": "55",
+        "sexe": "homme",
+        "ville": "senlis"
+    }
+}
