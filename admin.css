@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body{
+    background-color: #ffece4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; 
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    margin-top: 5vw;
+    position: relative;
+    line-height: 0;
+}
+.underline{
+    width: 50vw;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 5.25vw;
+    left: -2vw;
+}   
+.title h2{
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+    line-height: 0;
+    font-size: 2vw;
+    text-align: center;
+}
+h1{
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: lighter;
+    font-size: 5vw;
+    text-align: center;
+}
+.form{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20vw;
+    text-align: center;
+}
+.form input{
+    font-size: 1vw;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px;
+}
+#sexe{
+    font-size: 1vw;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px;
+}
+.form button{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px;
+    color: #000000;
+    border: solid 1px #000000;
+    padding: 10px;
+    font-size: 1vw;
+    font-weight: 400;
+    cursor: pointer;
+    transition: 0.5s;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+.form button:hover{
+    background-color: #000000;
+    color: #ffffff;
+    transition: 0.5s;
+}
+.form a {
+    margin-top: 2vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    color: #000000;
+    text-decoration: none;
+    transition: 1.5s;
+}
+.form a:hover {
+    color: #808080;
+    transition: 1s;
+}

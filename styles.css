@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Morison';
+    src: url('font/Morison-DisplayLight.otf') format('woff');
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+    background-color: #ffece4;
+    
+}
+.option {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2vw;
+    z-index: 1;
+}
+.option a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1vw;
+    color: #000000;
+    transition: 1s;
+    text-align: right;
+}
+.option a:hover {
+    color: #a5a5a5;
+    transition: 0.5s;
+}
+.slidebar {
+    position: fixed;
+    width: 3vw;
+    height: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    left: 0vw;
+    top: 5vh;
+    z-index: 1;
+    position: fixed;
+    font-size:  2vw;
+    gap: 6vw;
+    text-align: left;
+}
+.slidebar a{
+    transform: rotate(90deg);
+    top: 50%;
+    font-family: 'Morison';
+    color: transparent;
+    font-weight: 100;
+    text-decoration: none;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ffece4;
+    color: #000;
+    transition: 1s;
+}
+.slidebar a:hover {
+    transform: rotate(90deg) scale(1.3);
+    left: -6%;
+    color: #ffece4;
+    transition: 1s;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color: #000000;
+}
+.container {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    padding-top: 1vw;
+}
+.title {
+    position: relative;
+}
+.home {
+
+}
+.PicHome {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    
+}
+.home p {
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+    font-size: 1vw;
+}
+
+.home h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: lighter;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 0;
+}
+.home h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+    line-height: 0;
+    font-size: 2vw;
+    text-align: center;
+}
+.home img {
+    width: 30vw;
+    height: 40vw;
+}
+.underline {
+    width: 50vw;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 2vw;
+    left: 15vw;
+}
+.women {
+   margin-top: 10vw;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   scroll-behavior: smooth;
+}
+.women img {
+    width: 30vw;
+    height: 40vw;
+}
+.women h2{
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+    line-height: 0;
+    text-align: center;
+    font-size: 4vw;
+
+}
+.women p {
+    font-family: 'Cinzel', serif;
+    font-weight: lighter;
+    text-align: left;
+    font-size: 1vw;
+}
+.right{
+    text-align: right;
+}
+.trait {
+    width: 75vw;
+    height: 1px;
+    background-color: #000;
+    margin: 2vw;
+    margin-left: 2.5vw;
+}
+.navPic {  
+    display: flex;
+    gap: 10px;
+    scroll-behavior: smooth;
+    overflow-x: scroll;
+    scrollbar-color: #000;
+    scrollbar-width: bold;
+    scrollbar-color: #000;
+}
+.men {
+    margin-top: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-behavior: smooth;
+ }
+ .men img {
+     width: 30vw;
+     height: 40vw;
+ }
+ .men h2{
+     font-family: 'Cinzel', serif;
+     font-weight: lighter;
+     line-height: 0;
+     text-align: center;
+     font-size: 4vw;
+ 
+ }
