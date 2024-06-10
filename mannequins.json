@@ -1,182 +1,24 @@
 {
-    "mannequin666080e91bdcd": {
-        "id": "mannequin666080e91bdcd",
+    "mannequin6661a83fb8207": {
+        "id": "mannequin6661a83fb8207",
         "nom": "carton",
         "prenom": "sasha",
         "age": "19",
         "taille": "1.80",
-        "poids": "55",
+        "poids": "55.5",
         "sexe": "homme",
-        "ville": "senlis"
+        "ville": "senlis",
+        "chemin": "profilePic\/6661a83fb7867.png"
     },
-    "mannequin666080f08c44f": {
-        "id": "mannequin666080f08c44f",
+    "mannequin6661aa73c683a": {
+        "id": "mannequin6661aa73c683a",
         "nom": "carton",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin66608189542eb": {
-        "id": "mannequin66608189542eb",
-        "nom": "carton",
-        "prenom": "eznfqznf",
-        "age": "19",
-        "taille": "1.85",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "pontpoint"
-    },
-    "mannequin666086e7245b3": {
-        "id": "mannequin666086e7245b3",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ea96fad": {
-        "id": "mannequin666086ea96fad",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086eb6136c": {
-        "id": "mannequin666086eb6136c",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ebbea1c": {
-        "id": "mannequin666086ebbea1c",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ec1387c": {
-        "id": "mannequin666086ec1387c",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ec4ce34": {
-        "id": "mannequin666086ec4ce34",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ec78e80": {
-        "id": "mannequin666086ec78e80",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086eca0d9c": {
-        "id": "mannequin666086eca0d9c",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ecdef03": {
-        "id": "mannequin666086ecdef03",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ed0ee9a": {
-        "id": "mannequin666086ed0ee9a",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ed32f11": {
-        "id": "mannequin666086ed32f11",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ed65782": {
-        "id": "mannequin666086ed65782",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ed87a3f": {
-        "id": "mannequin666086ed87a3f",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ee556bb": {
-        "id": "mannequin666086ee556bb",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
-    },
-    "mannequin666086ee916a1": {
-        "id": "mannequin666086ee916a1",
-        "nom": "milan",
-        "prenom": "sasha",
-        "age": "19",
-        "taille": "1.80",
-        "poids": "55",
-        "sexe": "homme",
-        "ville": "senlis"
+        "prenom": "lea",
+        "age": "18",
+        "taille": "1.69",
+        "poids": "60",
+        "ville": "pont",
+        "sexe": "femme",
+        "chemin": "profilePic\/6661aa7b1b2ba.png"
     }
 }

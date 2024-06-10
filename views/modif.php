@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin'){
-    header('Location: login.php');
+    header('Location: login');
     exit();
 }
 $json = file_get_contents('mannequins.json');
@@ -22,7 +22,7 @@ if(isset($_POST['submit'])){
     if(empty($_FILES['image']['name'])){
         $chemin = $mannequin['chemin'];
     }else{
-        $dossier = 'profilePic/';
+        $dossier = '../views/profilePic/';
         $fichier = basename($_FILES['image']['name']);
         $nouveauNomFichier = uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
         move_uploaded_file($_FILES['image']['tmp_name'], $dossier.$nouveauNomFichier);
@@ -44,7 +44,7 @@ if(isset($_POST['submit'])){
     $tab[$id] = $mannequin;
     $tab = json_encode($tab, JSON_PRETTY_PRINT);
     file_put_contents('mannequins.json', $tab);
-    header('Location: listeMannequin.php');
+    header('Location: listeMannequin');
     exit();
 }
 ?>
@@ -56,7 +56,7 @@ if(isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="modif.css">
+    <link rel="stylesheet" href="../styles/modif.css">
     <title>Administration</title>
 </head>
 <body>
@@ -86,7 +86,7 @@ if(isset($_POST['submit'])){
         <label for="image">Image</label>
         <input type="file" name="image" id="image">
         <button type="submit" name="submit">Modifier</button>
-        <a href="listeMannequin.php">Retour</a>
+        <a href="listeMannequin">Retour</a>
     </form>
     </form>
 </body>

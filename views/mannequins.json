@@ -1,0 +1,90 @@
+{
+    "mannequin6666bd77346ce": {
+        "id": "mannequin6666bd77346ce",
+        "nom": "carton",
+        "prenom": "sashja",
+        "age": "85",
+        "taille": "1.9",
+        "poids": "900",
+        "sexe": "homme",
+        "ville": "caca",
+        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+    },
+    "mannequin123456789": {
+        "id": "mannequin123456789",
+        "nom": "Doe",
+        "prenom": "John",
+        "age": "30",
+        "taille": "1.8",
+        "poids": "75",
+        "sexe": "homme",
+        "ville": "New York",
+        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+    },
+    "mannequinabcdefg": {
+        "id": "mannequinabcdefg",
+        "nom": "Smith",
+        "prenom": "Jane",
+        "age": "25",
+        "taille": "1.7",
+        "poids": "60",
+        "sexe": "femme",
+        "ville": "Paris",
+        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+    },
+    "mannequin1": {
+        "id": "mannequin1",
+        "nom": "Doe",
+        "prenom": "John",
+        "age": "30",
+        "taille": "1.8",
+        "poids": "75",
+        "sexe": "homme",
+        "ville": "New York",
+        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+    },
+    "mannequin2": {
+        "id": "mannequin2",
+        "nom": "Smith",
+        "prenom": "Jane",
+        "age": "25",
+        "taille": "1.7",
+        "poids": "60",
+        "sexe": "femme",
+        "ville": "Paris",
+        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+    },
+    "mannequin3": {
+        "id": "mannequin3",
+        "nom": "Doe",
+        "prenom": "John",
+        "age": "30",
+        "taille": "1.8",
+        "poids": "75",
+        "sexe": "homme",
+        "ville": "New York",
+        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+    },
+    "mannequin4": {
+        "id": "mannequin4",
+        "nom": "Smith",
+        "prenom": "Jane",
+        "age": "25",
+        "taille": "1.7",
+        "poids": "60",
+        "sexe": "femme",
+        "ville": "Paris",
+        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+    },
+    "mannequin6666c40d0e906": {
+        "id": "mannequin6666c40d0e906",
+        "nom": "milan",
+        "prenom": "caca",
+        "age": "96",
+        "taille": "1.1",
+        "poids": "25",
+        "ville": "perpettemescouilles",
+        "sexe": "femme",
+        "chemin": "..\/views\/profilePic\/6666c51a4d6dd.png"
+    }
+}

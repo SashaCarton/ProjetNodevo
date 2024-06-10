@@ -4,14 +4,6 @@
         header('Location: login.php');
         exit();
     }
-    else{
-        echo 'Bienvenue' ." ". $_SESSION['login'];
-    }
-
-    
-
-
-    
 ?>
 
 
@@ -31,17 +23,17 @@
     <div class="underline"></div>
     <h2>MODELS AGENCY</h2>
     </div>
-    <form class="form" action="add.php" method="POST">
-        <label for="nom">Nom</label >
+    <form class="form" action="add.php" method="POST" enctype="multipart/form-data">
+        <label for="nom">Nom</label>
         <input type="text" name="nom" id="nom" placeholder="Ex. Carton" required>
         <label for="prenom">Prénom</label>
         <input type="text" name="prenom" id="prenom" placeholder="Ex. Sasha" required>
         <label for="age">Age</label>
-        <input type="number"  name="age" id="age" placeholder="Ex. 19" required>
+        <input type="number" name="age" id="age" placeholder="Ex. 19" required>
         <label for="taille">Taille</label>
         <input type="number" step="0.01" min="0" max="4" name="taille" id="taille" placeholder="Ex. 1.80" required>
         <label for="poids">Poids</label>
-        <input type="number" step="0.01"  name="poids" id="poids" placeholder="Ex. 55.5" required>
+        <input type="number" step="0.01" name="poids" id="poids" placeholder="Ex. 55.5" required>
         <label for="ville">Ville</label>
         <input type="text" name="ville" id="ville" placeholder="Ex. Senlis" required>
         <label for="sexe">Sexe</label>
@@ -50,9 +42,11 @@
             <option value="femme">Femme</option>
             <option value="autre">Autre</option>
         </select>
+        <label for="image">Image</label>
+        <input type="file" name="image" id="image" required>
         <button type="submit" name="submit">Ajouter</button>
         <a href="index.php">Retour</a>
-        <a href="modif.php">Modifier</a>
+        <a href="listeMannequin.php">Afficher / Modifier</a>
     </form>
         
 </body>

@@ -45,12 +45,12 @@ h1{
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     width: 20vw;
     text-align: center;
 }
 .form input{
-    font-size: 1vw;
+    font-size: 0.85vw;
     border: solid 1px #000000;
     border-radius: 10px;
     transition: 0.5s;
@@ -62,6 +62,7 @@ h1{
     border-radius: 10px;
     transition: 0.5s;
     padding: 5px;
+    background-color: #ffffff;
 }
 .form button{
     font-family: 'Montserrat', sans-serif;
@@ -107,3 +108,12 @@ h1{
 .navPic img{
     width: 10vw;
 }
+#image{
+    background-color: #ffffff;
+    
+}
+input[type="file"]{
+    background-color: #ffffff;
+}
+/* Path: ProjetNodevo/admin.css */
+  

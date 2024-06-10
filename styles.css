@@ -184,3 +184,85 @@ body {
      font-size: 4vw;
  
  }
+.history{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ .history h2{
+     font-family: 'Cinzel', serif;
+     font-weight: lighter;
+     line-height: 0;
+     text-align: center;
+     font-size: 4vw;
+ 
+ }
+ .contact {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+.devenirmannequin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    text-align: center;
+    margin-left: 10vw;
+}
+.devenirmannequin h2 {  
+    text-wrap: nowrap;
+    margin-right: 10vw;
+}
+.devenirmannequin form {
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+.form input {
+    font-size: 0.85vw;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px;
+}
+.form input:hover {
+    border: solid 1px #a5a5a5;
+    transition: 0.5s;
+}
+.form button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85vw;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px;
+    background-color: #ffffff;
+    margin-top: 20px;
+}
+#sexe {
+    font-size: 0.85vw;
+    border: solid 1px #000000;
+    border-radius: 10px;
+    transition: 0.5s;
+    padding: 5px;
+    background-color: #ffffff;
+}
+.form button:hover {
+    background-color: #222222;
+    transition: 0.5s;
+    color: #ffece4;
+}
+.form input[type="file"] {
+    background-color: #ffffff;
+}
+
