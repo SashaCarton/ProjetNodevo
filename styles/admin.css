@@ -115,5 +115,16 @@ h1{
 input[type="file"]{
     background-color: #ffffff;
 }
+.link{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1vw;
+    color: #000000;
+    text-decoration: none;
+    transition: 1.5s;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2vw;
+    gap: 1.5vw;
+}
 /* Path: ProjetNodevo/admin.css */
   
