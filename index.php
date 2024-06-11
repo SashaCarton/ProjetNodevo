@@ -61,6 +61,10 @@
             require __DIR__ . '/views/delete.php';
             break;
 
+            case '/modif':
+            require __DIR__ . '/views/modif.php';
+            break;
+
             case '/listeMannequin':
             require __DIR__ . '/views/listeMannequin.php';
             break;

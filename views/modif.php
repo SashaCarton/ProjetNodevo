@@ -1,15 +1,21 @@
 <?php 
 session_start();
+
+// Vérifie si l'utilisateur est connecté en tant qu'administrateur
 if($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin'){
-    header('Location: login');
+    header('Location: login'); // Redirige vers la page de connexion
     exit();
 }
-$json = file_get_contents('mannequins.json');
+
+$json = file_get_contents( __DIR__ . '/mannequins.json');
 $tab = json_decode($json, true);
-$id = $_GET['id'];
+
+$id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+$id = substr($id, 3);
 $mannequin = $tab[$id];
 
 if(isset($_POST['submit'])){
+    // Récupère les valeurs du formulaire
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
     $age = $_POST['age'];
@@ -17,18 +23,26 @@ if(isset($_POST['submit'])){
     $poids = $_POST['poids'];
     $ville = $_POST['ville'];
     $sexe = $_POST['sexe'];
-    $image = $_POST['image'];
+    $image = isset($_POST['image']) ? $_POST['image'] : '';
 
     if(empty($_FILES['image']['name'])){
+        // If no new image is selected, use the old image path
         $chemin = $mannequin['chemin'];
     }else{
-        $dossier = '../views/profilePic/';
+        $basePath = dirname(__DIR__);
+        $profilPic = '/views/profilePic';
+        var_dump($basePath);
+        $dossier = $basePath . $profilPic;
+        $PathJson = $basePath . '/views/mannequins.json';
         $fichier = basename($_FILES['image']['name']);
-        $nouveauNomFichier = uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
-        move_uploaded_file($_FILES['image']['tmp_name'], $dossier.$nouveauNomFichier);
-        $chemin = $dossier . $nouveauNomFichier;
+        $nouveauNomFichier = '/'.uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
+        move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $nouveauNomFichier);
+        $chemin = $profilPic . $nouveauNomFichier;
+        var_dump($dossier . $nouveauNomFichier);
     }
 
+
+    // Met à jour les informations du mannequin
     $mannequin = [
         'id' => $id,
         'nom' => $nom,
@@ -43,8 +57,9 @@ if(isset($_POST['submit'])){
 
     $tab[$id] = $mannequin;
     $tab = json_encode($tab, JSON_PRETTY_PRINT);
-    file_put_contents('mannequins.json', $tab);
-    header('Location: listeMannequin');
+    file_put_contents(__DIR__ .'/mannequins.json', $tab);
+
+    header('Location: listeMannequin'); // Redirige vers la liste des mannequins
     exit();
 }
 ?>

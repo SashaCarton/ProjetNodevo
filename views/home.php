@@ -66,6 +66,7 @@ array_values($mannequins);
         <a href="#men"><?php echo $lang[$langue]['men'] ?></a>
         <a href="#history"><?php echo $lang[$langue]['history'] ?></a>
         <a href="#contact"><?php echo $lang[$langue]['contact'] ?></a>
+        <img src="../views/profilePic/66685ac756f2e.png">
     </div>
     <div class="option">
         <div class="langue">

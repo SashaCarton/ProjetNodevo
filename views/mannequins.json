@@ -1,15 +1,4 @@
 {
-    "mannequin6666bd77346ce": {
-        "id": "mannequin6666bd77346ce",
-        "nom": "carton",
-        "prenom": "sashja",
-        "age": "85",
-        "taille": "1.9",
-        "poids": "900",
-        "sexe": "homme",
-        "ville": "caca",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
-    },
     "mannequin123456789": {
         "id": "mannequin123456789",
         "nom": "Doe",
@@ -45,14 +34,14 @@
     },
     "mannequin2": {
         "id": "mannequin2",
-        "nom": "Smith",
+        "nom": "bbbzbzbbz",
         "prenom": "Jane",
         "age": "25",
         "taille": "1.7",
         "poids": "60",
-        "sexe": "femme",
         "ville": "Paris",
-        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+        "sexe": "femme",
+        "chemin": "\/views\/profilePic\/66686a62d1d0e.webp"
     },
     "mannequin3": {
         "id": "mannequin3",

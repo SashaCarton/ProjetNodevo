@@ -28,9 +28,9 @@
         "age": "25",
         "taille": "1.7",
         "poids": "60",
-        "sexe": "femme",
         "ville": "Paris",
-        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+        "sexe": "femme",
+        "chemin": "..\/views\/profilePic\/66684d4dd2187.png"
     },
     "mannequin1": {
         "id": "mannequin1",
@@ -45,13 +45,13 @@
     },
     "mannequin2": {
         "id": "mannequin2",
-        "nom": "Smith",
+        "nom": "ahhhhhh",
         "prenom": "Jane",
         "age": "25",
         "taille": "1.7",
         "poids": "60",
-        "sexe": "femme",
         "ville": "Paris",
+        "sexe": "femme",
         "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
     },
     "mannequin3": {
