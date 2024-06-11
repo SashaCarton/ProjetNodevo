@@ -5,7 +5,7 @@
         exit();
     }
     
-    $json = file_get_contents('nouveauMannequin.json');
+    $json = file_get_contents(__DIR__ . '/nouveauMannequin.json');
     $tab = json_decode($json, true);
     $keywords = isset($_POST['keywords']) ? $_POST['keywords'] : '';
     $keywords = strtolower($keywords);

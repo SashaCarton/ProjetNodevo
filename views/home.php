@@ -2,20 +2,17 @@
 <?php
 session_start();
 
-
-use Google\Cloud\Translate\V2\TranslateClient;
-include '../translate/langues.php';
+include_once  __DIR__ . '/translate/langues.php';
 
 $langue = $_COOKIE['langue'] ?? $langue;
-
-$json = file_get_contents('mannequins.json');
-$tab = json_decode($json, true);
+ 
+$json = file_get_contents( __DIR__ . '/mannequins.json');
+$tab = json_decode($json, true) ?? [];
 $taille = count($tab);
 $tabNum = array_values($tab);
 $elementsParPage = 3;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-
+$pageNumber = 5;
 
 function affichage($id){
     global $tab;
@@ -35,8 +32,21 @@ function pagination($tab, $elementsParPage){
     $mannequins = array_slice($tab, $premierMannequin, $elementsParPage);
     return $mannequins;
 }
+
+
+
 $mannequins = pagination($tab, $elementsParPage);
-var_dump($mannequins[0]);
+
+//partie pagination
+
+$nombreDePages = ceil($taille / $elementsParPage);
+$pageNumber = isset($_GET['page']) ? $_GET['page'] : 1;
+$premierMannequin = ($pageNumber - 1) * $elementsParPage;
+$mannequins = array_slice($tab, $premierMannequin, $elementsParPage);
+array_values($mannequins);
+ 
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,12 +103,13 @@ var_dump($mannequins[0]);
             </div>
         </div>
         <div class="women">
-            <img src="../images/angle-droit.png" class="arrowRight" alt="">
-            <img src="../images/angle-gauche.png" class="arrowLeft"  alt="">
+            <button type="Submit" class="arrowRight"></button>
+            <button class="arrowLeft"></button>
             <h2 id="women"><?php echo $lang[$langue]['women'] ?></h2>
             <div class="trait"></div>
             <div class="navPic">
                 <?php 
+  
                 foreach($tab as $mannequin){
                     if($mannequin['sexe'] === 'femme'){
                         echo '<div>';
@@ -204,21 +215,11 @@ function getPageNumberFromHash() {
     return match ? parseInt(match[1], 10) : 1; // Retourne 1 si aucun numéro de page n'est trouvé
 }
 
-document.querySelector('.arrowLeft').addEventListener('click', function(){
-    let currentPage = getPageNumberFromHash();
-    if (currentPage > 1) {
-        let newPage = currentPage - 1;
-        let newUrl = '#women?page=' + newPage;
-        history.pushState({page: newPage}, '', newUrl);
-    }
-});
-
-document.querySelector('.arrowRight').addEventListener('click', function(){
-    let currentPage = getPageNumberFromHash();
-    let nextPage = currentPage + 1;
-    let newUrl = '#women?page=' + nextPage;
-    history.pushState({page: nextPage}, '', newUrl);
-});
+    document.querySelector('.arrowRight').addEventListener('click', function(){
+        const pageNumber = getPageNumberFromHash();
+        window.location.hash = `page=${pageNumber + 1}`;
+    });
+   
 </script>
 </body>
 </html>

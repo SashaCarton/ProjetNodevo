@@ -7,7 +7,10 @@ if ($_SESSION['login'] !== 'admin' || $_SESSION['password'] !== 'admin') {
     exit();
 }
 
-if ($_GET['where'] === 'demandes') {
+
+$where = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+
+if ($where === 'demandes') {
     $oldJson = file_get_contents('nouveauMannequin.json');
     $tab = json_decode($oldJson, true);
     $id = $_GET['id'];

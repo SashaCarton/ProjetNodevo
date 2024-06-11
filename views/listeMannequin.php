@@ -5,10 +5,10 @@
         exit();
     }
 
-    include '../translate/langues.php';
+    include __DIR__ .  '/translate/langues.php';
     $langue = $_COOKIE['langue'] ?? $langue;
     
-    $json = file_get_contents('mannequins.json');
+    $json = file_get_contents( __DIR__ . '/mannequins.json');
     $tab = json_decode($json, true);
     $keywords = isset($_POST['keywords']) ? $_POST['keywords'] : '';
     $keywords = strtolower($keywords);

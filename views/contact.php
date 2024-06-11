@@ -2,7 +2,7 @@
 
 
 
-include '../translate/langues.php';
+include  __DIR__ . '/translate/langues.php';
 $langue = $_COOKIE['langue'] ?? $langue;
 
 session_start();
@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <th><?php echo $lang[$langue]['message'] ?></th>
             </tr>
             <?php
-            $json = file_get_contents('/var/www/html/ProjetNodevo/contact.json');
+            $json = file_get_contents(__DIR__ . '/contact.json');
             $tab = json_decode($json, true);
             foreach ($tab as $index => $contact) {
                 echo '<tr>';

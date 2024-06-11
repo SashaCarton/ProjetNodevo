@@ -1,31 +1,48 @@
 <?php 
 session_start();
 
+
+
+$id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+    $id = substr($id, 3);
+
+
+
+
+
+
+
+
+
+
+
+
+
 if ($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin') {
     header('Location: login');
     exit();
 }
-$id = $_GET['id'];
-$where = $_GET['where'];
+
+$where = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
 if ($where ==='demandes'){
-    $json = file_get_contents('nouveauMannequin.json');
+    $json = file_get_contents(__DIR__ .'/nouveauMannequin.json');
     $tab = json_decode($json, true);
-    $id = $_GET['id'];
     $mannequin = $tab[$id];
     unset($tab[$id]);
     $tab = json_encode($tab, JSON_PRETTY_PRINT);
-    file_put_contents('nouveauMannequin.json', $tab);
+    file_put_contents(__DIR__ .'/nouveauMannequin.json', $tab);
     header('Location: demandes');
 } else {
-    $json = file_get_contents('mannequins.json');
+    $json = file_get_contents(__DIR__ . '/mannequins.json');
     $tab = json_decode($json, true);
-    $id = $_GET['id'];
     $mannequin = $tab[$id];
+    $id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+    $id = substr($id, 3);
     unset($tab[$id]);
     $tab = json_encode($tab, JSON_PRETTY_PRINT);
-    file_put_contents('mannequins.json', $tab);
+    file_put_contents(__DIR__ . '/mannequins.json', $tab);
     header('Location: listeMannequin');
 }
 ?>

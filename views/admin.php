@@ -4,7 +4,7 @@
         header('Location: login');
         exit();
     }
-    include '../translate/langues.php';
+    include __DIR__ .  '/translate/langues.php';
     $langue = $_COOKIE['langue'] ?? $langue;
 ?>
 <!DOCTYPE html>
@@ -46,7 +46,7 @@
         <input type="file" name="image" id="image" required>
         <button type="submit" name="submit">Ajouter</button>
         <div class="link">
-            <a href="index"><?php echo $lang[$langue]['return'] ?></a>
+            <a href="home"><?php echo $lang[$langue]['return'] ?></a>
             <a href="listeMannequin"><?php echo $lang[$langue]['view/edit'] ?></a>
             <a href="contact"><?php echo $lang[$langue]['contact'] ?></a>
         </div>

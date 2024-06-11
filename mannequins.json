@@ -64,5 +64,38 @@
         "sexe": "homme",
         "ville": "New York",
         "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+    },
+    "mannequin4": {
+        "id": "mannequin4",
+        "nom": "Smith",
+        "prenom": "Jane",
+        "age": "25",
+        "taille": "1.7",
+        "poids": "60",
+        "sexe": "femme",
+        "ville": "Paris",
+        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+    },
+    "mannequin6666c40d0e906": {
+        "id": "mannequin6666c40d0e906",
+        "nom": "milan",
+        "prenom": "caca",
+        "age": "96",
+        "taille": "1.1",
+        "poids": "25",
+        "ville": "perpettemescouilles",
+        "sexe": "femme",
+        "chemin": "..\/views\/profilePic\/6666c51a4d6dd.png"
+    },
+    "mannequin66683f478f311": {
+        "id": "mannequin66683f478f311",
+        "nom": "supercaca",
+        "prenom": "caca",
+        "age": "55",
+        "taille": "3.99",
+        "poids": "55",
+        "sexe": "homme",
+        "ville": "55",
+        "chemin": "..\/views\/profilePic\/66683f478f2c8.png"
     }
 }

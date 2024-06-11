@@ -1,27 +1,4 @@
-RewriteEngine On
-# Ne pas réécrire les fichiers ou répertoires existants
+RewriteEngine on
+
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^$ "/views/home.php"
-RewriteRule ^home$ "/views/home.php"
-RewriteRule ^index$ "/views/home.php"
-RewriteRule ^login$ "/views/login.php" [L]
-RewriteRule ^admin$ "/views/admin.php" [L]
-RewriteRule ^listeMannequin$ "/views/listeMannequin.php" [L]
-RewriteRule ^contact$ "/views/contact.php" [L]
-RewriteRule ^demandes$ "/views/demandes.php" [L]
-RewriteRule ^404$ "/views/404.php" [L]
-RewriteRule ^mannequin$ "/views/mannequin.php" [L]
-RewriteRule ^delete$ "/views/delete.php" [L]
-RewriteRule ^modif\?id=([0-9a-zA-Z]+)$ "/views/modif.php?id=$1" [L]
-RewriteRule ^modif$ "/views/modif.php" [L]
-RewriteRule ^add$ "/views/add.php" [L]
-RewriteRule ^demandes$ "/views/demandes.php" [L]
-RewriteRule ^postuler$ "/views/postuler.php" [L]
-RewriteRule ^fr$ "/views/fr.php" [L]
-RewriteRule ^en$ "/views/en.php" [L]
-RewriteRule ^de$ "/views/de.php" [L]
-RewriteRule ^es$ "/views/es.php" [L]
-RewriteRule ^it$ "/views/it.php" [L]
-RewriteRule ^pt$ "/views/pt.php" [L]
-RewriteRule ^ru$ "/views/ru.php" [L]
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

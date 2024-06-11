@@ -11,6 +11,6 @@ echo '<a href="index">Back to home</a>';
     <title>Erreur 404</title>
 </head>
 <body>
-    
+    <p>404</p>
 </body>
 </html>
