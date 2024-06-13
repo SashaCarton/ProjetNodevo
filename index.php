@@ -11,7 +11,6 @@
             break;
            
         case '/home':
-            echo 'home';
             require_once __DIR__ . '/views/home.php';
             break;
             
@@ -77,6 +76,13 @@
             require __DIR__ . '/views/demandes.php';
             break;
 
+            case '/postuler':
+            require __DIR__ . '/views/postuler.php';
+            break;
+            
+            case '/affichage':
+                require __DIR__ . '/views/affichage.php';
+                break;
             
         default:
             require __DIR__ . '/views/404.php';

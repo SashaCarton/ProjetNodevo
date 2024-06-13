@@ -1,1 +1,35 @@
-[]
+{
+    "mannequin6669558d28397": {
+        "id": "mannequin6669558d28397",
+        "nom": "zqdzqzqd",
+        "prenom": "qzzq",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "sexe": "femme",
+        "ville": "2",
+        "chemin": "\/views\/profilePic\/6669558d28399.png"
+    },
+    "mannequin666955fa6bbc9": {
+        "id": "mannequin666955fa6bbc9",
+        "nom": "zqdzqzqd",
+        "prenom": "qzzq",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "sexe": "femme",
+        "ville": "2",
+        "chemin": "\/views\/profilePic\/666955fa6b7b2.png"
+    },
+    "mannequin66695600df4e9": {
+        "id": "mannequin66695600df4e9",
+        "nom": "zqdzqzqd",
+        "prenom": "qzzq",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "sexe": "femme",
+        "ville": "2",
+        "chemin": "\/views\/profilePic\/66695600df1bd.png"
+    }
+}

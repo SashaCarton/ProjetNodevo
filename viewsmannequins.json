@@ -41,7 +41,7 @@
         "poids": "60",
         "ville": "Paris",
         "sexe": "femme",
-        "chemin": "\/views\/profilePic\/6669b16946fe2.jpg"
+        "chemin": "\/views\/profilePic\/66686a62d1d0e.webp"
     },
     "mannequin3": {
         "id": "mannequin3",
@@ -54,48 +54,15 @@
         "ville": "New York",
         "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
     },
-    "mannequin66695847a30d5": {
-        "id": "mannequin66695847a30d5",
-        "nom": "zqdzqzqd",
-        "prenom": "qzzq",
-        "age": "2",
+    "mannequin6669528f54bdb": {
+        "id": "mannequin6669528f54bdb",
+        "nom": "qzdzdq",
+        "prenom": "zqdzqd",
+        "age": "55",
         "taille": "2",
         "poids": "2",
         "sexe": "femme",
         "ville": "2",
-        "chemin": "\/views\/profilePic\/66695847a2d4f.png"
-    },
-    "mannequin6669584fb29fb": {
-        "id": "mannequin6669584fb29fb",
-        "nom": "zqdzqzqd",
-        "prenom": "qzzq",
-        "age": "2",
-        "taille": "2",
-        "poids": "2",
-        "sexe": "femme",
-        "ville": "2",
-        "chemin": "\/views\/profilePic\/6669584fb2679.png"
-    },
-    "mannequin6669a18f44f8b": {
-        "id": "mannequin6669a18f44f8b",
-        "nom": "carton",
-        "prenom": "lea",
-        "age": "18",
-        "taille": "1.69",
-        "poids": "60",
-        "ville": "senlis",
-        "sexe": "femme",
-        "chemin": "\/views\/profilePic\/6669a1a44792a.png"
-    },
-    "mannequin6669a1970d01b": {
-        "id": "mannequin6669a1970d01b",
-        "nom": "carton",
-        "prenom": "lea",
-        "age": "18",
-        "taille": "1.69",
-        "poids": "60",
-        "ville": "senlis",
-        "sexe": "femme",
-        "chemin": "\/views\/profilePic\/6669a1b188b17.png"
+        "chemin": "\/var\/www\/html\/ProjetNodevo\/views\/profilePic\/6669528f547fe.png"
     }
 }
