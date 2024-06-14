@@ -11,6 +11,7 @@ html {
 body {
     background-color: #ffece4;
     
+    
 }
 .option {
     position: absolute;
@@ -86,7 +87,12 @@ body {
     display: flex;
     gap: 10px;
     justify-content: center;
-    
+}
+.PicHome img {
+    width: 30vw;
+    height: 40vw;
+    z-index: 1;
+    backdrop-filter: grayscale(100%) 100%; 
 }
 .home p {
     font-family: 'Cinzel', serif;
@@ -128,13 +134,15 @@ body {
     justify-content: center;
     scroll-behavior: smooth;
     height: 50vw;
+    width: 80vw;
 }
 .women img {
-    width: 30vw;
-    height: 40vw;
+    width: 19.5vw;
+    height: 25vw;
     z-index: 1;
-    backdrop-filter: grayscale(100%) 100%; ;
+    backdrop-filter: grayscale(100%) 100%; 
 }
+
 .women h2{
     font-family: 'Cinzel', serif;
     font-weight: lighter;
@@ -144,19 +152,40 @@ body {
 
 }
 .info {
-    bottom: 8vw;
+    display: flex;
+    justify-content: left;
+    text-align: left;
     color: #ffffff;
-    background-color: #222222;
-    width: 28vw;
+    backdrop-filter: brightness(0.75) ;
+    color: #ffffff;
+    width: 90%;
+    height: 35%;
     position: absolute;
+    transition: 1s;
+    font-size: 0.80vw;
+    bottom: 5vw;
     padding-left: 2vw;
-    filter: opacity(0);
 }
+
+.info {
+    transition: 1s;
+    opacity: 0;
+    transform: translateY(3vw) !important;
+    visibility: hidden;
+}
+
+.info.visible {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 1;
+    transform: translateY(-5vw);
+    visibility: visible; 
+    cursor: pointer;
+    background-color: #222222;
+}
+
 .women p {
     font-family: 'Cinzel', serif;
     font-weight: lighter;
-    text-align: left;
-    font-size: 1vw;
 }
 .right{
     text-align: right;
@@ -178,26 +207,29 @@ body {
     scrollbar-color: #000;
 }
 .men {
+    position: relative;
     margin-top: 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     scroll-behavior: smooth;
+    height: 50vw;
  }
  .men img {
-     width: 30vw;
-     height: 40vw;
- }
+    width: 30vw;
+    height: 40vw;
+    z-index: 1;
+    backdrop-filter: grayscale(100%) 100%; ;
+}
  .men h2{
      font-family: 'Cinzel', serif;
      font-weight: lighter;
      line-height: 0;
      text-align: center;
      font-size: 4vw;
- 
+    
  }
 .history{
-
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -352,3 +384,37 @@ body {
 .hidden {
     overflow: hidden;
 }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.fade-in {
+    animation: fadeInAnimation 10s ease-in-out forwards!important;
+}
+
+/* .fade-out {
+    animation: fadeOutAnimation 2s ease-in-out forwards!important;
+} */

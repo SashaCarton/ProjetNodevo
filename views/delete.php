@@ -1,42 +1,22 @@
-<?php 
+<?php
 session_start();
-
-
 
 $id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
 $id = substr($id, 3);
-
-
-
-
-
-
-
-
-
-
-
-
 
 if ($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin') {
     header('Location: login');
     exit();
 }
 
-
-
 $queryString = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
-$variable [] = parse_str($queryString, $params);
+parse_str($queryString, $params);
+$variable = $params;
 $where = $params['where'];
 $id = $params['id'];
 var_dump($where);
 echo '<br>';
 var_dump($id);
-
-
-
-
-
 
 if ($where === 'demandes') {
     $json = file_get_contents(__DIR__ . '/nouveauMannequin.json');
@@ -45,7 +25,7 @@ if ($where === 'demandes') {
     unset($tab[$id]);
     $tab = json_encode($tab, JSON_PRETTY_PRINT);
     file_put_contents(__DIR__ . '/nouveauMannequin.json', $tab);
-    header('Location: demandes'); 
+    header('Location: demandes');
 } else {
     $json = file_get_contents(__DIR__ . '/mannequins.json');
     $tab = json_decode($json, true);
@@ -57,4 +37,4 @@ if ($where === 'demandes') {
     file_put_contents(__DIR__ . '/mannequins.json', $tab);
     header('Location: listeMannequin');
 }
-?>
+
