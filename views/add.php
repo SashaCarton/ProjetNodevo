@@ -26,11 +26,12 @@ if ($where === 'demandes') {
     exit();
 } else {
     $basePath = dirname(__DIR__);
+    $publicPath = $basePath . '/public';
     $profilPic = '/profilePic';
-    $dossier = $basePath . $profilPic;
+    $uploadProfilPic = $publicPath . $profilPic;
     $fichier = basename($_FILES['image']['name']);
     $nouveauNomFichier = '/' . uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
-    move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $nouveauNomFichier);
+    move_uploaded_file($_FILES['image']['tmp_name'], $uploadProfilPic . $nouveauNomFichier);
     $chemin = $profilPic . $nouveauNomFichier;
     $nom = strtolower($_POST['nom']);
     $prenom = strtolower($_POST['prenom']);
@@ -39,7 +40,7 @@ if ($where === 'demandes') {
     $poids = $_POST['poids'];
     $sexe = $_POST['sexe'];
     $ville = strtolower($_POST['ville']);
-    $oldJson = file_get_contents(__DIR__.'/nouveauMannequin.json');
+    $oldJson = file_get_contents(__DIR__.'/mannequin.json');
     $tab = json_decode($oldJson, true);
     $id = "mannequin" . uniqid();
     $mannequin = [
@@ -55,7 +56,7 @@ if ($where === 'demandes') {
     ];
     $tab[$id] = $mannequin;
     $newJson = json_encode($tab, JSON_PRETTY_PRINT);
-    file_put_contents(__DIR__.'nouveauMannequin.json', $newJson . PHP_EOL);
+    file_put_contents(__DIR__.'/mannequin.json', $newJson . PHP_EOL);
 
     $PathJson = $basePath . '/mannequins.json';
     $mannequinsJson = file_get_contents($PathJson);

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@font-face {
+    font-family: 'Morison';
+    src: url('font/Morison-DisplayLight.otf') format('woff');
+}
+
+
+@font-face {
+    font-family: 'cinzel';
+    src: url('../font/Cinzel-Regular.ttf') format('truetype');
+}
+
+
+body {
+    overflow-x: hidden;
+    margin: 0;
+}
+.racing{
+    background-image: url("/images/background.png");
+    height: 100vh;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.menu{
+    display: flex;
+    background-color: #222222;
+    gap: 10vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    position: fixed;
+    z-index:2;
+    width: 100%;
+}
+.menu a{
+    margin-top: 0.5vw;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.5s;
+}
+.menu a:hover{
+    color: #a6051a;
+    transition: 0.5s;
+    box-shadow: 1;
+}
+.menu img{
+    margin-left: 1vw;
+}
+.racing h2{
+    font-size: 3vw;
+    color: white;
+    position: absolute;
+    top: 40vw;
+    left: 70vw;
+    font-family: 'cinzel', serif;
+}
+.arrow{
+    position : absolute;
+    width: 5vw;
+    top: 45vw;
+    left: 45vw;
+    transition: 1s;
+}
+.arrow:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: 1s;
+}
+.sports{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #9F9F9F;
+    height: 100vh;
+}
+.container img{
+    width: 25vw;
+    height: 15vw;
+}
+.container div{
+    border: 1px solid black;
+    width: 25vw;
+    background-color: #222222;
+    color: white;
+}
+.container{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5vw;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    overflow: none;
+}

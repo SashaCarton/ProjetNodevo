@@ -6,17 +6,18 @@ session_start();
 
 
 $basePath = dirname(__DIR__);
-$profilPic = '/views/newProfilePic';
+$publicPath = $basePath . '/public';
+$profilPic = $basePath . '/newProfilePic';
+$uploadProfilPic = $basePath . $profilPic;
 var_dump($basePath);
-$dossier = $basePath . $profilPic;
-$PathJson = $basePath . '/views/nouveauMannequin.json';
-$fichier = basename($_FILES['image']['name']);
-$nouveauNomFichier = '/'.uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
-move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $nouveauNomFichier);
-$chemin = $profilPic . $nouveauNomFichier;
-var_dump($dossier . $nouveauNomFichier);
 
-// $dossier = '../views/newProfilePic/';$fichier = basename($_FILES['image']['name']);
+$PathJson = $basePath . '/nouveauMannequin.json';
+$fichier = basename($_FILES['image']['name']);
+$nouveauNomFichier = '/' . uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
+move_uploaded_file($_FILES['image']['tmp_name'], $uploadProfilPic . $nouveauNomFichier);
+$chemin = $profilPic . $nouveauNomFichier;
+
+// $uploadProfilPic = '../public/newProfilePic/';$fichier = basename($_FILES['image']['name']);
 // $nouveauNomFichier = uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
 // move_uploaded_file($_FILES['image']['tmp_name'], $dossier.$nouveauNomFichier);
 // $chemin = $dossier . $nouveauNomFichier;
@@ -42,11 +43,11 @@ $mannequin = [
     'poids' => $poids,
     'sexe' => $sexe,
     'ville' => $ville,
-    'chemin' => $chemin 
+    'chemin' => $chemin
 ];
 
 $tab[$id] = $mannequin;
 $newJson = json_encode($tab, JSON_PRETTY_PRINT);
-file_put_contents(__DIR__ .'/nouveauMannequin.json', $newJson);
- header('Location: index#contact');
+file_put_contents(__DIR__ . '/nouveauMannequin.json', $newJson);
+//header('Location: index#contact');
 
