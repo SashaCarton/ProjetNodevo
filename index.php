@@ -73,11 +73,5 @@
             require __DIR__ . '/views/demandes.php';
             break;
 
-            
-        default:
-            require __DIR__ . '/views/404.php';
-            http_response_code(404);
-            echo '404';
-            break;
     }
 ?>
