@@ -1,5 +1,5 @@
 <?php
-$json = file_get_contents(__DIR__ . '/mannequins.json');
+$json = file_get_contents(dirname(__DIR__) . '/views/mannequins.json');
 $tab = json_decode($json, true) ?? [];
 $taille = count($tab);
 $elementsParPage = 3;

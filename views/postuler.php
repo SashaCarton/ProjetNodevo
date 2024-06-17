@@ -48,6 +48,5 @@ $mannequin = [
 $tab[$id] = $mannequin;
 $newJson = json_encode($tab, JSON_PRETTY_PRINT);
 file_put_contents(__DIR__ .'/nouveauMannequin.json', $newJson);
-
-// header('Location: index#contact');
+ header('Location: index#contact');
 

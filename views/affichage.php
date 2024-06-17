@@ -1,6 +1,6 @@
 <?php
 
-include_once  __DIR__ . '/translate/langues.php';
+include_once  dirname(__DIR__) . '/views/translate/langues.php';
 
 $langue = $_COOKIE['langue'] ?? $langue;
 

@@ -30,15 +30,15 @@ if(isset($_POST['submit'])){
         $chemin = $mannequin['chemin'];
     }else{
         $basePath = dirname(__DIR__);
-        $profilPic = '/views/profilePic';
+        $publicPath = $basePath . '/public';
+        $profilPic =  '/profilePic';
         var_dump($basePath);
-        $dossier = $basePath . $profilPic;
-        $PathJson = $basePath . '/views/mannequins.json';
+        $uploadProfilPic = $publicPath . $profilPic;
+        $pathJson = $basePath . '/mannequins.json';
         $fichier = basename($_FILES['image']['name']);
         $nouveauNomFichier = '/'.uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
-        move_uploaded_file($_FILES['image']['tmp_name'], $dossier . $nouveauNomFichier);
+        move_uploaded_file($_FILES['image']['tmp_name'], $uploadProfilPic . $nouveauNomFichier);
         $chemin = $profilPic . $nouveauNomFichier;
-        var_dump($dossier . $nouveauNomFichier);
     }
 
 

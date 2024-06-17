@@ -2,15 +2,16 @@
 session_start();
 include_once __DIR__ . '/translate/langues.php';
 
+
 $langue = $_COOKIE['langue'] ?? $langue;
 
-$json = file_get_contents(__DIR__ . '/mannequins.json');
+$json = file_get_contents(dirname(__DIR__) . '/views/mannequins.json');
 $tab = json_decode($json, true) ?? [];
 $taille = count($tab);
 $elementsParPage = 3;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 $pageNumber = 5;
-
+$path = (dirname(__DIR__));
 
 
 
@@ -61,12 +62,10 @@ $num = 2;
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="/styles/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
     <title>Kalos Kagathos</title>
@@ -269,19 +268,17 @@ $num = 2;
             }
             document.querySelector('.navPic').style.transition = 'transform 0.5s ease-in-out';
             document.querySelector('.navPic').style.transform = 'translateX(' + (-page * 19.5) + 'vw)';
-            window.location.href = '/home#women';
+    
         });
 
         // Event listener for clicking the left arrow button in the 'women' section
         document.querySelector('.arrowLeft').addEventListener('click', function () {
-            window.location.href = '/home#women';
             page--;
             if (page < 0) {
                 page = pageMax;
             }
             document.querySelector('.navPic').style.transition = 'transform 0.5s ease-in-out';
             document.querySelector('.navPic').style.transform = 'translateX(' + (-page * 19.5) + 'vw)';
-            window.location.href = '/home#women';
         });
 
         // Event listener for clicking the right arrow button in the 'men' section
@@ -292,19 +289,16 @@ $num = 2;
             }
             document.querySelector('.men .navPic').style.transition = 'transform 0.5s ease-in-out';
             document.querySelector('.men .navPic').style.transform = 'translateX(' + (-page * 19.5) + 'vw)';
-            window.location.href = '/home#men';
         });
 
         // Event listener for clicking the left arrow button in the 'men' section
         document.querySelector('.men .arrowLeft').addEventListener('click', function () {
-            window.location.href = '/home#men';
             page--;
             if (page < 0) {
                 page = pageMax;
             }
             document.querySelector('.men .navPic').style.transition = 'transform 0.5s ease-in-out';
             document.querySelector('.men .navPic').style.transform = 'translateX(' + (-page * 30) + 'vw)';
-            window.location.href = '/home#men';
         });
 
         // Add mouseover and mouseout event listeners for each div with class 'navPic'

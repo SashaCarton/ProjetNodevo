@@ -214,12 +214,14 @@ body {
     justify-content: center;
     scroll-behavior: smooth;
     height: 50vw;
+    width: 80vw;
  }
+ 
  .men img {
-    width: 30vw;
-    height: 40vw;
+    width: 19.5vw;
+    height: 25vw;
     z-index: 1;
-    backdrop-filter: grayscale(100%) 100%; ;
+    backdrop-filter: grayscale(100%) 100%; 
 }
  .men h2{
      font-family: 'Cinzel', serif;
@@ -418,3 +420,7 @@ body {
 /* .fade-out {
     animation: fadeOutAnimation 2s ease-in-out forwards!important;
 } */
+
+footer {
+    margin-left: 10vw;
+}

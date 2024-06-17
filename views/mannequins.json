@@ -8,7 +8,7 @@
         "poids": "78",
         "sexe": "homme",
         "ville": "Lyon",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "chemin": "\/profilePic\/6666bd77341f3.png"
     },
     "mannequinabcdefg": {
         "id": "mannequinabcdefg",
@@ -19,7 +19,7 @@
         "poids": "62",
         "sexe": "femme",
         "ville": "Marseille",
-        "chemin": "..\/views\/profilePic\/6666c1279cc44.png"
+        "chemin": "\/profilePic\/6666c1279cc44.png"
     },
     "mannequin1": {
         "id": "mannequin1",
@@ -30,7 +30,7 @@
         "poids": "80",
         "sexe": "homme",
         "ville": "Nice",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "chemin": "\/profilePic\/6666bd77341f3.png"
     },
     "mannequin2": {
         "id": "mannequin2",
@@ -41,18 +41,7 @@
         "poids": "58",
         "sexe": "femme",
         "ville": "Toulouse",
-        "chemin": "\/views\/profilePic\/666aacd61cee0.png"
-    },
-    "mannequin3": {
-        "id": "mannequin3",
-        "nom": "Garcia",
-        "prenom": "Hugo",
-        "age": "29",
-        "taille": "1.79",
-        "poids": "76",
-        "sexe": "homme",
-        "ville": "Bordeaux",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "chemin": "\/profilePic\/666aacd61cee0.png"
     },
     "mannequin66695847a30d5": {
         "id": "mannequin66695847a30d5",
@@ -63,29 +52,29 @@
         "poids": "59",
         "sexe": "femme",
         "ville": "Lille",
-        "chemin": "\/views\/profilePic\/66695847a2d4f.png"
+        "chemin": "\/profilePic\/66695847a2d4f.png"
     },
     "mannequin6669584fb29fb": {
         "id": "mannequin6669584fb29fb",
         "nom": "Roux",
-        "prenom": "Mélanie",
+        "prenom": "M\u00e9lanie",
         "age": "27",
         "taille": "1.74",
         "poids": "63",
         "sexe": "femme",
         "ville": "Nantes",
-        "chemin": "\/views\/profilePic\/6669584fb2679.png"
+        "chemin": "\/profilePic\/6669584fb2679.png"
     },
     "mannequin6669a18f44f8b": {
         "id": "mannequin6669a18f44f8b",
         "nom": "Perrin",
-        "prenom": "Chloé",
+        "prenom": "Chlo\u00e9",
         "age": "21",
         "taille": "1.70",
         "poids": "57",
         "sexe": "femme",
         "ville": "Strasbourg",
-        "chemin": "\/views\/profilePic\/6669a1a44792a.png"
+        "chemin": "\/profilePic\/6669a1a44792a.png"
     },
     "mannequin6669a1970d01b": {
         "id": "mannequin6669a1970d01b",
@@ -96,10 +85,10 @@
         "poids": "60",
         "sexe": "femme",
         "ville": "Rennes",
-        "chemin": "\/views\/profilePic\/666aad32ab94a.png"
+        "chemin": "\/profilePic\/666aad32ab94a.png"
     },
     "mannequin8": {
-        "id": "mannequin3",
+        "id": "mannequin8",
         "nom": "Garcia",
         "prenom": "Hugo",
         "age": "29",
@@ -107,28 +96,39 @@
         "poids": "76",
         "sexe": "homme",
         "ville": "Bordeaux",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "chemin": "\/profilePic\/6666bd77341f3.png"
     },
-    "mannequin7": {
-        "id": "mannequin3",
-        "nom": "Garcia",
-        "prenom": "Hugo",
-        "age": "29",
-        "taille": "1.79",
-        "poids": "76",
+    "mannequin666fe854574cb": {
+        "id": "mannequin666fe854574cb",
+        "nom": "boll\u00e9",
+        "prenom": "gilles",
+        "age": "54",
+        "taille": "1.70",
+        "poids": "75",
         "sexe": "homme",
-        "ville": "Bordeaux",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "ville": "cambrone",
+        "chemin": "\/profilePic\/666fe85457397.png"
     },
-    "mannequin6": {
-        "id": "mannequin3",
-        "nom": "Garcia",
-        "prenom": "Hugo",
-        "age": "29",
-        "taille": "1.79",
-        "poids": "76",
+    "mannequin666ff48585f35": {
+        "id": "mannequin666ff48585f35",
+        "nom": "ccc",
+        "prenom": "fefe",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "ville": "zdqd",
+        "sexe": "femme",
+        "chemin": "\/profilePic\/667005d9c125f.png"
+    },
+    "mannequin666ff529951e7": {
+        "id": "mannequin666ff529951e7",
+        "nom": "zdqzd",
+        "prenom": "qzddzq",
+        "age": "1",
+        "taille": "1",
+        "poids": "1",
+        "ville": "zdqz",
         "sexe": "homme",
-        "ville": "Bordeaux",
-        "chemin": "..\/views\/profilePic\/6666bd77341f3.png"
+        "chemin": "\/profilePic\/6670068ee9639.jpg"
     }
 }

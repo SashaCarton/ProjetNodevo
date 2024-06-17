@@ -32,100 +32,96 @@ $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 
 
-
-
-
-
-
+$path = (dirname(__DIR__) .'/views');
 switch ($url) {
     case '/index':
-        require __DIR__ . '/views/home.php';
+        require  $path .'/home.php';
         break;
 
     case '/':
-        require __DIR__ . '/views/home.php';
+        require  $path .'/home.php';
         break;
 
     case '/home':
-        require_once __DIR__ . '/views/home.php';
+        require  $path .'/home.php';
         break;
 
     case '/login':
-        require_once __DIR__ . '/views/login.php';
+        require  $path .'/login.php';
         break;
 
     case '/admin':
-        require __DIR__ . '/views/admin.php';
+        require  $path .'/admin.php';
         break;
 
     case '/fr':
-        require __DIR__ . '/views/fr.php';
+        require  $path .'/fr.php';
         $_COOKIE['langue'] = 'fr';
         break;
 
     case '/en':
-        require __DIR__ . '/views/en.php';
+        require  $path .'/en.php';
         $_COOKIE['langue'] = 'en';
         break;
 
     case '/de':
-        require __DIR__ . '/views/de.php';
+        require  $path .'/de.php';
         $_COOKIE['langue'] = 'de';
         break;
 
     case '/es':
-        require __DIR__ . '/views/es.php';
+        require  $path .'/es.php';
         $_COOKIE['langue'] = 'es';
         break;
 
     case '/it':
-        require __DIR__ . '/views/it.php';
+        require  $path .'/it.php';
         $_COOKIE['langue'] = 'it';
         break;
 
     case '/ru':
         $_COOKIE['langue'] = 'ru';
-        require __DIR__ . '/views/ru.php';
+        require  $path .'/ru.php';
         break;
 
-        case '/add':
-        require __DIR__ . '/views/add.php';
+    case '/add':
+        require  $path .'/add.php';
         break;
 
-        case '/delete':
-        require __DIR__ . '/views/delete.php';
+    case '/delete':
+        require  $path .'/delete.php';
         break;
 
-        case '/modif':
-        require __DIR__ . '/views/modif.php';
+    case '/modif':
+        require  $path .'/modif.php';
         break;
 
-        case '/listeMannequin':
-        require __DIR__ . '/views/listeMannequin.php';
+    case '/listeMannequin':
+        require  $path .'/listeMannequin.php';
         break;
 
-        case '/contact':
-        require __DIR__ . '/views/contact.php';
+    case '/contact':
+        require  $path .'/contact.php';
         break;
 
-        case '/demandes':
-        require __DIR__ . '/views/demandes.php';
+    case '/demandes':
+        require  $path .'/demandes.php';
         break;
 
-        case '/postuler':
-        require __DIR__ . '/views/postuler.php';
+    case '/postuler':
+        require  $path .'/postuler.php';
         break;
 
-        case '/affichage':
-            require __DIR__ . '/views/affichage.php';
-            break;
+    case '/affichage':
+        require  $path .'/affichage.php';
+        break;
 
-        case '/randomMannequin':
-            require __DIR__ . '/views/randomMannequin.php';
-            break;
+    case '/randomMannequin':
+        require  $path .'/randomMannequin.php';
+        break;
 
     default:
-        require __DIR__ . '/views/404.php';
+        require  $path .'/404.php';
         http_response_code(404);
         echo '404';
         break;
