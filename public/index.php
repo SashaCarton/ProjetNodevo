@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -68,7 +68,7 @@
     </div>
 </body>
 
-</html>
+</html> -->
 
 
 
@@ -137,8 +137,7 @@
 
 
 
-
-<!-- 
+<?php
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 
 // require_once __DIR__ . '/router/router.php';
@@ -269,4 +268,4 @@ switch ($url) {
         http_response_code(404);
         echo '404';
         break;
-} -->
+}

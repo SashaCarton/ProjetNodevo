@@ -335,7 +335,6 @@ $num = 2;
                         // element.style.width = '8vw';
                     }
                     arreterSlideshow();
-                    document.querySelector
                 });
             });
         });
@@ -374,7 +373,7 @@ $num = 2;
 
 
         setInterval(ChangerImagesHome, 10000);
-
+        
 
 
 
