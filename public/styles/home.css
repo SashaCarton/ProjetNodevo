@@ -168,14 +168,13 @@ body {
 }
 
 .info {
-    transition: 1s;
+    transition:  0.5s ease-in-out, transform 0.5s ease-in-out!important;
     opacity: 0;
     transform: translateY(3vw) !important;
-    visibility: hidden;
 }
 
 .info.visible {
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out!important;
     opacity: 1;
     transform: translateY(-5vw);
     visibility: visible; 

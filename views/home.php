@@ -239,18 +239,21 @@ $num = 2;
         document.querySelectorAll('.navPic div').forEach(div => {
             // Show the 'info' element on mouseover
             div.addEventListener('mouseover', function () {
-                var infoElement = this.querySelector('.info');
-                if (infoElement) {
-                    infoElement.classList.add('visible');
-                }
+            var infoElement = this.querySelector('.info');
+            if (infoElement) {
+                infoElement.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+                infoElement.classList.add('visible');
+            }
             });
 
             // Hide the 'info' element on mouseout
             div.addEventListener('mouseout', function () {
-                var infoElement = this.querySelector('.info');
-                if (infoElement) {
-                    infoElement.classList.remove('visible');
-                }
+            var infoElement = this.querySelector('.info');
+            if (infoElement) {
+                infoElement.style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+                infoElement.classList.remove('visible');
+                document.querySelector('.info').style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
+            }
             });
         });
 
@@ -323,6 +326,7 @@ $num = 2;
                 });
                 temp = 10000;
                 document.querySelector('#' + id).style.transform = 'scale(1.1)';
+                document.querySelector('.info.visible').style.transition = 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out';
                 // document.querySelector('#' + id).style.width = '33%';
                 document.querySelector('#' + id).style.backdropFilter = 'blur(10px)';
                 document.querySelector('#' + id).style.transition = 'transform 0.5s ease-in-out';
@@ -334,6 +338,7 @@ $num = 2;
                         element.style.transition = 'filter 0.5s ease-in-out';
                         // element.style.width = '8vw';
                     }
+                    
                     arreterSlideshow();
                 });
             });
@@ -373,7 +378,7 @@ $num = 2;
 
 
         setInterval(ChangerImagesHome, 10000);
-        
+
 
 
 
