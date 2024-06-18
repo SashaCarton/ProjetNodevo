@@ -38,6 +38,7 @@ if(isset($_POST['submit'])){
         $fichier = basename($_FILES['image']['name']);
         $nouveauNomFichier = '/'.uniqid() . '.' . pathinfo($fichier, PATHINFO_EXTENSION);
         move_uploaded_file($_FILES['image']['tmp_name'], $uploadProfilPic . $nouveauNomFichier);
+        var_dump($uploadProfilPic . $nouveauNomFichier);
         $chemin = $profilPic . $nouveauNomFichier;
     }
 

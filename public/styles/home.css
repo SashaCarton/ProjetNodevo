@@ -159,7 +159,7 @@ body {
     backdrop-filter: brightness(0.75) ;
     color: #ffffff;
     width: 90%;
-    height: 35%;
+    height: 0%;
     position: absolute;
     transition: 1s;
     font-size: 0.80vw;
@@ -174,7 +174,9 @@ body {
 }
 
 .info.visible {
+    
     transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out!important;
+    height: 35%;
     opacity: 1;
     transform: translateY(-5vw);
     visibility: visible; 

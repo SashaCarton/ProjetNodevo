@@ -397,6 +397,4 @@ $num = 2;
         // document.querySelector('.right img');
         // document.querySelector('.home img');
     </script>
-</body>
-
-</html>
+    </html>
