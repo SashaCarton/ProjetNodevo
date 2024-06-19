@@ -15,7 +15,7 @@
     $keywords = trim($keywords);
 
     function findIndex($keywords){
-        global $tab;
+        $tab = json_decode(file_get_contents( __DIR__ . '/mannequins.json'), true);
         $result = [];
         foreach($tab as $key => $value){
             if($value['nom'] === $keywords || $value['prenom'] === $keywords || $value['age'] === $keywords || $value['taille'] === $keywords || $value['poids'] === $keywords || $value['sexe'] === $keywords || $value['ville'] === $keywords){
@@ -28,7 +28,7 @@
     $result = findIndex($keywords);
 
     function affichage($id){
-        global $tab;
+        $tab = json_decode(file_get_contents( __DIR__ . '/mannequins.json'), true);
         echo '<img class="imgAll" src="'. $tab[$id]['chemin'] .'" alt="">';
         echo '<p>'. $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] .'<br>'. ' ' . $tab[$id]['age'] . ' '.'ans' .'<br>'. $tab[$id]['taille'] .'m'. '<br> ' . $tab[$id]['poids'] .'kg' .'<br>'.' ' . $tab[$id]['sexe'] .' <br>'. ' ' . $tab[$id]['ville'] .'</p>';        
     }

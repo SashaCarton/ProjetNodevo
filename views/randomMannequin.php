@@ -9,9 +9,8 @@ $pageNumber = 5;
 
 
 
-function affichage($id)
+function affichage($id, $tab)
 {
-    global $tab;
     echo '<img src="' . $tab[$id]['chemin'] . '" alt="">';
     echo '<div class="info">';
     echo '<p>' . $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] . '<br>' . ' ' . $tab[$id]['age'] . ' ' . 'ans' . '<br>' . $tab[$id]['taille'] . 'm' . '<br> ' . $tab[$id]['poids'] . 'kg' . '<br>' . ' ' . $tab[$id]['sexe'] . ' <br>' . ' ' . $tab[$id]['ville'] . '</p>';
@@ -27,7 +26,7 @@ function randomAffichage($tab, $nombre)
 {
     $randomMannequin = array_rand($tab, $nombre);
     for ($i = 0; $i < $nombre; $i++) {
-        affichage($randomMannequin[$i]);
+        affichage($randomMannequin[$i], $tab);
     }
 }
 

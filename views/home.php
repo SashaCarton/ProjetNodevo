@@ -1,9 +1,10 @@
 <?php
 session_start();
+$langue = $_COOKIE['langue'] ?? 'fr';
 include_once __DIR__ . '/translate/langues.php';
 
 
-$langue = $_COOKIE['langue'] ?? $langue;
+
 
 $json = file_get_contents(dirname(__DIR__) . '/views/mannequins.json');
 $tab = json_decode($json, true) ?? [];
@@ -15,9 +16,8 @@ $path = (dirname(__DIR__));
 
 
 
-function affichage($id)
+function affichage($id, $tab)
 {
-    global $tab;
     echo '<img src="' . $tab[$id]['chemin'] . '" alt="">';
     echo '<div class="info">';
     echo '<p>' . $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] . '<br>' . ' ' . $tab[$id]['age'] . ' ' . 'ans' . '<br>' . $tab[$id]['taille'] . 'm' . '<br> ' . $tab[$id]['poids'] . 'kg' . '<br>' . ' ' . $tab[$id]['sexe'] . ' <br>' . ' ' . $tab[$id]['ville'] . '</p>';
@@ -33,7 +33,7 @@ function randomAffichage($tab, $nombre)
 {
     $randomMannequin = array_rand($tab, $nombre);
     for ($i = 0; $i < $nombre; $i++) {
-        affichage($randomMannequin[$i]);
+        affichage($randomMannequin[$i], $tab);
     }
 }
 
@@ -124,7 +124,7 @@ $num = 2;
                     foreach ($tab as $mannequin) {
                         if ($mannequin['sexe'] === 'femme') {
                             echo '<div id="' . $mannequin['id'] . '">';
-                            affichage($mannequin['id']);
+                            affichage($mannequin['id'], $tab);
                             echo '</div>';
                         }
                     }
@@ -144,7 +144,7 @@ $num = 2;
                     foreach ($tab as $mannequin) {
                         if ($mannequin['sexe'] === 'homme') {
                             echo '<div id="' . $mannequin['id'] . '">';
-                            affichage($mannequin['id']);
+                            affichage($mannequin['id'], $tab);
                             echo '</div>';
                         }
                     }
@@ -234,7 +234,6 @@ $num = 2;
                 return result;
             };
         }
-
         // Add event listeners for mouseover and mouseout on each div with class 'navPic'
         document.querySelectorAll('.navPic div').forEach(div => {
             // Show the 'info' element on mouseover
@@ -375,14 +374,7 @@ $num = 2;
                 .catch(error => console.error('Erreur lors de la récupération du HTML:', error)); // Gère les erreurs éventuelles
             });
         }
-
-
         setInterval(ChangerImagesHome, 10000);
-
-
-
-
-
         // Function to stop the slideshow
         function arreterSlideshow() {
             clearInterval(time);
