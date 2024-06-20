@@ -1,10 +1,5 @@
 <?php
 
-session_start();
-
-
-
-
 $basePath = dirname(__DIR__);
 $publicPath = $basePath . '/public';
 $profilPic = $basePath . '/newProfilePic';
