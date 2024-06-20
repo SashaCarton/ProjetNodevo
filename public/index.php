@@ -1,115 +1,71 @@
 <?php
-$url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+require '../autoload.php';
+use Display\Display;
+use Router\Router;
+use Router\Request;
+use controllers\MainController;
 
-// $path = (dirname(__DIR__) .'/views');
-$path = (dirname(__DIR__)) . "/";
+$rootPath = dirname(__DIR__);
+session_start();
+$mainController = new MainController($rootPath . '/views', $_SESSION);
+$router = new Router();
+$router->add('GET', '/home', $mainController->home(...));
+$router->add('GET', '/', $mainController->home(...));
+$router->add('GET', '', $mainController->home(...));
+$router->add('GET', '/index', $mainController->home(...));
+$router->add('GET', '/admin', $mainController->admin(...));
+$router->add('GET', '/affichage', $mainController->affichage(...));
+$router->add('GET', '/randomMannequin', $mainController->randomMannequin(...));
+$router->add('GET', '/listeMannequin', $mainController->std(...));
+$router->add('GET', '/404', $mainController->error404(...));
+$router->add('GET', '/add', $mainController->add(...));
+$router->add('GET', '/admin', $mainController->admin(...));
+$router->add('GET', '/affichage', $mainController->affichage(...));
+$router->add('GET', '/contact', $mainController->getContact(...));
+$router->add('GET', '/delete', $mainController->delete(...));
+$router->add('GET', '/demandes', $mainController->demandes(...));
+$router->add('GET', '/home', $mainController->home(...));
+$router->add('GET', '/listeMannequin', $mainController->std(...));
+$router->add('GET', '/postuler', $mainController->std(...));
+$router->add('GET', '/randomMannequin', $mainController->randomMannequin(...));
+$router->add('GET', '/de', $mainController->lang(...));
+$router->add('GET', '/en', $mainController->lang(...));
+$router->add('GET', '/es', $mainController->lang(...));
+$router->add('GET', '/fr', $mainController->lang(...));
+$router->add('GET', '/it', $mainController->lang(...));
+$router->add('GET', '/ru', $mainController->lang(...));
+$router->add('GET', '/login', $mainController->getLogin(...));
+$router->add('POST', '/home', $mainController->home(...));
+$router->add('POST', '/', $mainController->home(...));
+$router->add('POST', '', $mainController->home(...));
+$router->add('POST', '/index', $mainController->home(...));
+$router->add('POST', '/admin', $mainController->admin(...));
+$router->add('POST', '/affichage', $mainController->affichage(...));
+$router->add('POST', '/randomMannequin', $mainController->randomMannequin(...));
+$router->add('POST', '/listeMannequin', $mainController->std(...));
+$router->add('POST', '/404', $mainController->error404(...));
+$router->add('POST', '/add', $mainController->add(...));
+$router->add('POST', '/admin', $mainController->admin(...));
+$router->add('POST', '/affichage', $mainController->affichage(...));
+$router->add('POST', '/contact', $mainController->postContact(...));
+$router->add('POST', '/delete', $mainController->delete(...));
+$router->add('POST', '/demandes', $mainController->demandes(...));
+$router->add('POST', '/home', $mainController->home(...));
+$router->add('POST', '/listeMannequin', $mainController->std(...));
+$router->add('POST', '/postuler', $mainController->std(...));
+$router->add('POST', '/login', $mainController->postLogin(...));
+$router->add('POST', '/randomMannequin', $mainController->randomMannequin(...));
+$router->add('POST', '/de', $mainController->lang(...));
+$router->add('POST', '/en', $mainController->lang(...));
+$router->add('POST', '/es', $mainController->lang(...));
+$router->add('POST', '/fr', $mainController->lang(...));
+$router->add('POST', '/it', $mainController->lang(...));
+$router->add('POST', '/ru', $mainController->lang(...));
 
-include $path .'/controllers/Controller.php';
-$controller = new controllers\Controller($path);
+$request = Request::fromGlobals();
+$controller = $router->resolve($request);
 
-
-
-switch ($url) {
-    case '/index':
-    case '/':
-    case '/home':
-        echo $controller->render('home');
-        break;
-
-    case '/login':
-        echo $controller->render('login');
-        break;
-
-    case '/admin':
-        echo $controller->render('admin');
-        break;
-
-    case '/fr':
-        echo $controller->render('fr');
-        $_COOKIE['langue'] = 'fr';
-        break;
-
-    case '/en':
-        echo $controller->render('en');
-        $_COOKIE['langue'] = 'en';
-        break;
-
-    case '/de':
-        echo $controller->render('de');
-        $_COOKIE['langue'] = 'de';
-        break;
-
-    case '/es':
-        echo $controller->render('es');
-        $_COOKIE['langue'] = 'es';
-        break;
-
-    case '/it':
-        echo $controller->render('it');
-        $_COOKIE['langue'] = 'it';
-        break;
-
-    case '/ru':
-        echo $controller->render('ru');
-        $_COOKIE['langue'] = 'ru';
-        break;
-
-    case '/add':
-        echo $controller->render('add');
-        break;
-
-    case '/delete':
-        echo $controller->render('delete');
-        break;
-
-    case '/modif':
-        echo $controller->render('modif');
-        break;
-
-    case '/listeMannequin':
-        echo $controller->render('listeMannequin');
-        break;
-
-    case '/contact':
-        echo $controller->render('contact');
-        break;
-
-    case '/demandes':
-        echo $controller->render('demandes');
-        break;
-
-    case '/postuler':
-        echo $controller->render('postuler');
-        break;
-
-    case '/affichage':
-        echo $controller->render('affichage');
-        break;
-
-    case '/randomMannequin':
-        echo $controller->render('randomMannequin');
-        break;
-
-    case '/f1':
-        echo $controller->render('f1');
-        break;
-
-    default:
-        require  $path .'/404.php';
-        http_response_code(404);
-        echo '404';
-        break;
-}
+call_user_func($controller, $request);
 
 
-
-
-
-
-
-
-
-
-
-
-
+//include dirname(__DIR__).$controller;

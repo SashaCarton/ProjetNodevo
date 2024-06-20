@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 $langue = $_COOKIE['langue'] ?? 'fr';
 include_once __DIR__ . '/translate/langues.php';
 
@@ -162,7 +162,7 @@ $num = 2;
             <div class="form">
                 <div class="contact">
                     <h2 id="contact"><?php echo $lang[$langue]['contact'] ?></h2>
-                    <form action="contact" method="POST">
+                    <form action="/contact" method="POST">
                         <label for="nom"><?php echo $lang[$langue]['last name'] ?></label>
                         <input type="text" name="nom" id="nom" required>
                         <label for="prenom"><?php echo $lang[$langue]['first name'] ?></label>

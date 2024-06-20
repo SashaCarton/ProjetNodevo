@@ -1,12 +1,3 @@
-<?php 
-    session_start();
-    if($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin'){
-        header('Location: login');
-        exit();
-    }
-    include __DIR__ .  '/translate/langues.php';
-    $langue = $_COOKIE['langue'] ?? $langue;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,7 +15,7 @@
     <h2>MODELS AGENCY</h2>
     </div>
     <form class="form" action="add" method="POST" enctype="multipart/form-data">
-        <label for="nom"><?php echo $lang[$langue]['last name'] ?></label>
+        <label for="nom"><?= $lang[$langue]['last name'] ?></label>
         <input type="text" name="nom" id="nom" placeholder="Ex. Carton" required>
         <label for="prenom"><?php echo $lang[$langue]['first name'] ?></label>
         <input type="text" name="prenom" id="prenom" placeholder="Ex. Sasha" required>

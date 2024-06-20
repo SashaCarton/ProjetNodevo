@@ -1,40 +1,3 @@
-<?php
-
-
-
-include  __DIR__ . '/translate/langues.php';
-$langue = $_COOKIE['langue'] ?? $langue;
-
-session_start();
-if ($_SESSION['login'] !== 'admin' || $_SESSION['password'] !== 'admin') {
-    header('Location: login');
-    exit();
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $id = uniqid();
-    $contact = [
-        'nom' => $nom,
-        'prenom' => $prenom,
-        'email' => $email,
-        'message' => $message,
-        'id' => $id
-    ];
-
-    $oldjson = file_get_contents('contact.json');
-    $tab = json_decode($oldjson, true);
-    $tab[] = $contact;
-    $tab = json_encode($tab, JSON_PRETTY_PRINT);
-    file_put_contents('contact.json', $tab);
-    var_dump($tab);
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,12 +14,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <h2>MODELS AGENCY</h2>
     </div>
     <?php 
-    echo "<a href='admin'>" . $lang[$langue]['return'] . "</a>"; 
+    echo "<a href='admin'>" . $t['return'] . "</a>"; 
     ?>
     <div class="contact">
         <table>
             <tr>
-                <th><?php echo $lang[$langue]['last name'] ?></th>
+                <th><?php echo $t['last name'] ?></th>
                 <th><?php echo $lang[$langue]['first name'] ?></th>
                 <th><?php echo $lang[$langue]['email'] ?></th>
                 <th><?php echo $lang[$langue]['message'] ?></th>

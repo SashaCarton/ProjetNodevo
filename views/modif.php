@@ -1,5 +1,4 @@
 <?php 
-session_start();
 
 // Vérifie si l'utilisateur est connecté en tant qu'administrateur
 if($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin'){

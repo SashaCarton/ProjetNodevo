@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     if($_SESSION['login'] !== 'admin' || $_SESSION['password'] !== 'admin'){
         header('Location: login');
         exit();
