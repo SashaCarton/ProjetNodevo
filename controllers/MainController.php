@@ -70,7 +70,7 @@ class MainController
         return $this->getLogin($request);
     }
     public function getLogin(Request $request)
-    {   
+    {
         return $this->render($request, 'login.php');
     }
     public function admin(Request $request)
@@ -86,9 +86,10 @@ class MainController
     {
         include $this->rootPath . '/affichage.php';
     }
-    public function randomMannequin()
-    {
-        include $this->rootPath . '/randomMannequin.php';
+
+    public function randomMannequin(Request $request)
+    {   
+        return $this->render($request, 'randomMannequin.php');
     }
     public function error404()
     {
@@ -100,9 +101,50 @@ class MainController
         include $this->rootPath . '/add.php';
     }
 
-    public function delete()
+    public function getDelete(Request $request)
     {
-        include $this->rootPath . '/delete.php';
+
+        // return $this->render($this->render($this->getUrl($request),'');
+
+
+        // $id = $request->get('id');
+        // $id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+        // $id = substr($id, 3);
+
+        // if ($_SESSION['login'] !== 'admin' && $_SESSION['password'] !== 'admin') {
+        //     header('Location: login');
+        //     exit();
+        // }
+
+        // $queryString = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+        // parse_str($queryString, $params);
+        // $variable = $params;
+        // $where = $params['where'];
+        // $id = $params['id'];
+        // var_dump($where);
+        // echo '<br>';
+        // var_dump($id);
+
+        // if ($where === 'demandes') {
+        //     $json = file_get_contents(__DIR__ . '/nouveauMannequin.json');
+        //     $tab = json_decode($json, true);
+        //     $mannequin = $tab[$id];
+        //     unset($tab[$id]);
+        //     $tab = json_encode($tab, JSON_PRETTY_PRINT);
+        //     file_put_contents(__DIR__ . '/nouveauMannequin.json', $tab);
+        //     header('Location: demandes');
+        // } else {
+        //     $json = file_get_contents(__DIR__ . '/mannequins.json');
+        //     $tab = json_decode($json, true);
+        //     $mannequin = $tab[$id];
+        //     $id = parse_url($_SERVER['REQUEST_URI'], PHP_URL_QUERY);
+        //     $id = substr($id, 3);
+        //     unset($tab[$id]);
+        //     $tab = json_encode($tab, JSON_PRETTY_PRINT);
+        //     file_put_contents(__DIR__ . '/mannequins.json', $tab);
+        //     header('Location: listeMannequin');
+        // }
+
     }
 
     public function demandes()
@@ -141,9 +183,16 @@ class MainController
         return '';
     }
 
-    private function redirect(string $url):void {
-        header('Location: '. $url);
+    private function redirect(string $url): void
+    {
+        header('Location: ' . $url);
         exit();
 
+    }
+    public function getUrl(Request $request): string
+    {
+        $uri = $request->uri;
+        $uri = parse_url($uri);
+        return $uri['path'];
     }
 }

@@ -9,6 +9,8 @@ $rootPath = dirname(__DIR__);
 session_start();
 $mainController = new MainController($rootPath . '/views', $_SESSION);
 $router = new Router();
+$request = Request::fromGlobals();
+// var_dump($router->getUrl($request));
 $router->add('GET', '/home', $mainController->home(...));
 $router->add('GET', '/', $mainController->home(...));
 $router->add('GET', '', $mainController->home(...));
@@ -22,7 +24,7 @@ $router->add('GET', '/add', $mainController->add(...));
 $router->add('GET', '/admin', $mainController->admin(...));
 $router->add('GET', '/affichage', $mainController->affichage(...));
 $router->add('GET', '/contact', $mainController->getContact(...));
-$router->add('GET', '/delete', $mainController->delete(...));
+$router->add('GET', '/delete', $mainController->getDelete(...));
 $router->add('GET', '/demandes', $mainController->demandes(...));
 $router->add('GET', '/home', $mainController->home(...));
 $router->add('GET', '/listeMannequin', $mainController->std(...));
@@ -48,7 +50,7 @@ $router->add('POST', '/add', $mainController->add(...));
 $router->add('POST', '/admin', $mainController->admin(...));
 $router->add('POST', '/affichage', $mainController->affichage(...));
 $router->add('POST', '/contact', $mainController->postContact(...));
-$router->add('POST', '/delete', $mainController->delete(...));
+$router->add('POST', '/delete', $mainController->getDelete(...));
 $router->add('POST', '/demandes', $mainController->demandes(...));
 $router->add('POST', '/home', $mainController->home(...));
 $router->add('POST', '/listeMannequin', $mainController->std(...));
@@ -62,7 +64,7 @@ $router->add('POST', '/fr', $mainController->lang(...));
 $router->add('POST', '/it', $mainController->lang(...));
 $router->add('POST', '/ru', $mainController->lang(...));
 
-$request = Request::fromGlobals();
+
 $controller = $router->resolve($request);
 
 call_user_func($controller, $request);

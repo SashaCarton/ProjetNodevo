@@ -152,5 +152,16 @@
         "sexe": "femme",
         "ville": "Montpellier",
         "chemin": "\/profilePic\/66713ceef08b9.png"
+    },
+    "mannequin667535fa5fdd1": {
+        "id": "mannequin667535fa5fdd1",
+        "nom": "carton",
+        "prenom": "zqzq",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "sexe": "homme",
+        "ville": "adazd",
+        "chemin": "\/profilePic\/667535fa5fd10.png"
     }
 }

@@ -72,6 +72,13 @@ $num = 2;
 </head>
 
 <body>
+<video class="video" autoplay muted>
+
+<source src="video/mannequin.mp4" type="video/mp4">
+
+</video>
+
+    <div class="all">
     <div class="slidebar">
         <a href="#home"><?php echo $lang[$langue]['home'] ?></a>
         <a href="#women"><?php echo $lang[$langue]['women'] ?></a>
@@ -104,9 +111,6 @@ $num = 2;
                 <h1>Kalos Kagathos</h1>
                 <div class="underline"></div>
                 <h2>MODELS AGENCY</h2>
-                <div class="video">
-            <video src="/images/mannequin.mp4" autoplay loop muted  type="video/mp4"></video>
-        </div>
             </div>
             <div class="PicHome">
               
@@ -217,10 +221,29 @@ $num = 2;
             <a href=""><img src="twitter.png" alt=""></a>
         </div>
     </footer>
+    </div>
     <script>
 
         once(ChangerImagesHome());
-        once(demarrerSlideshow());
+        once(LoadingVideo());
+        
+        function ShowloadingVideo() {
+            document.querySelector('.all').style.display = 'none';
+            document.querySelector('.video').style.display= 'block';
+        }
+        function HideLoadingVideo() {
+            document.querySelector('.all').style.display = 'block';
+            document.querySelector('.video').style.display= 'none';
+        }
+        function LoadingVideo() {
+            time = setInterval(function () {
+                HideLoadingVideo(); 
+            }, 5000);
+            
+            ShowloadingVideo();
+        }
+
+
 
 
         // Function to execute a function only once
