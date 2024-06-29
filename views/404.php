@@ -2,7 +2,7 @@
 http_response_code(404);
 echo '<h1>404</h1>';
 echo '<h2>Page not found</h2>';
-echo '<a href="index">Back to home</a>';
+echo '<a href="/">Back to home</a>';
 ?>
 <!DOCTYPE html>
 <html lang="en">

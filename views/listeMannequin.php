@@ -28,7 +28,7 @@
 
     function affichage($id){
         $tab = json_decode(file_get_contents( __DIR__ . '/mannequins.json'), true);
-        echo '<img class="imgAll" src="'. $tab[$id]['chemin'] .'" alt="">';
+        echo '<img class="imgAll" src="/portfolio/ProjetNodevo/public'. $tab[$id]['chemin'] .'" alt="">';
         echo '<p>'. $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] .'<br>'. ' ' . $tab[$id]['age'] . ' '.'ans' .'<br>'. $tab[$id]['taille'] .'m'. '<br> ' . $tab[$id]['poids'] .'kg' .'<br>'.' ' . $tab[$id]['sexe'] .' <br>'. ' ' . $tab[$id]['ville'] .'</p>';        
     }
 ?>
@@ -39,7 +39,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="../styles/listeMannequin.css">
+    <link rel="stylesheet" href="/portfolio/ProjetNodevo/public/styles/listeMannequin.css">
     <title>Administration</title>
 </head>
 <body>

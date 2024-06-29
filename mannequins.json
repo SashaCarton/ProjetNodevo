@@ -53,5 +53,16 @@
         "sexe": "homme",
         "ville": "zzzd",
         "chemin": "\/profilePic\/66713ceef08b9.png"
+    },
+    "mannequin667a78d6252da": {
+        "id": "mannequin667a78d6252da",
+        "nom": "caca",
+        "prenom": "caca",
+        "age": "2",
+        "taille": "2",
+        "poids": "2",
+        "sexe": "homme",
+        "ville": "cacacity",
+        "chemin": "\/profilePic\/667a78d623fdb.PNG"
     }
 }

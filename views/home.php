@@ -18,7 +18,7 @@ $path = (dirname(__DIR__));
 
 function affichage($id, $tab)
 {
-    echo '<img src="' . $tab[$id]['chemin'] . '" alt="">';
+    echo '<img src="/portfolio/ProjetNodevo/public' . $tab[$id]['chemin'] . '" alt="">';
     echo '<div class="info">';
     echo '<p>' . $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] . '<br>' . ' ' . $tab[$id]['age'] . ' ' . 'ans' . '<br>' . $tab[$id]['taille'] . 'm' . '<br> ' . $tab[$id]['poids'] . 'kg' . '<br>' . ' ' . $tab[$id]['sexe'] . ' <br>' . ' ' . $tab[$id]['ville'] . '</p>';
     echo '</div>';
@@ -65,7 +65,7 @@ $num = 2;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/portfolio/ProjetNodevo/public/styles/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
     <title>Kalos Kagathos</title>
@@ -78,6 +78,7 @@ $num = 2;
         <a href="#men"><?php echo $lang[$langue]['men'] ?></a>
         <a href="#history"><?php echo $lang[$langue]['history'] ?></a>
         <a href="#contact"><?php echo $lang[$langue]['contact'] ?></a>
+        <img src="/portfolio/ProjetNodevo/public/images/traverser.png" alt="">
     </div>
     <div class="option">
         <div class="langue">
@@ -379,6 +380,10 @@ $num = 2;
         function arreterSlideshow() {
             clearInterval(time);
         }
+
+        document.querySelector('.slidebar img').addEventListener('click', function () {
+            document.location.href = '/';
+        });
 
         // Start the slideshow only once
         

@@ -1,18 +1,28 @@
+<?php
+$langue = $_COOKIE['langue'];
+
+if (isset($_SESSION['username'])) {
+    header("Location:/ProjetNodevo/login");
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/admin.css">
+    <link rel="stylesheet" href="/portfolio/ProjetNodevo/public/styles/admin.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <title>Administration</title>
 </head>
+
 <body>
     <div class="title">
-    <h1>Kalos Kagathos</h1>
-    <div class="underline"></div>
-    <h2>MODELS AGENCY</h2>
+        <h1>Kalos Kagathos</h1>
+        <div class="underline"></div>
+        <h2>MODELS AGENCY</h2>
     </div>
     <form class="form" action="add" method="POST" enctype="multipart/form-data">
         <label for="nom"><?= $lang[$langue]['last name'] ?></label>
@@ -43,4 +53,5 @@
         </div>
     </form>
 </body>
+
 </html>

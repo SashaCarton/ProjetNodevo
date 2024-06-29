@@ -8,10 +8,9 @@ $pageNumber = 5;
 
 
 
-
 function affichage($id, $tab)
 {
-    echo '<img src="' . $tab[$id]['chemin'] . '" alt="">';
+    echo '<img src="/portfolio/ProjetNodevo/public' . $tab[$id]['chemin'] . '" alt="">';
     echo '<div class="info">';
     echo '<p>' . $tab[$id]['nom'] . ' ' . $tab[$id]['prenom'] . '<br>' . ' ' . $tab[$id]['age'] . ' ' . 'ans' . '<br>' . $tab[$id]['taille'] . 'm' . '<br> ' . $tab[$id]['poids'] . 'kg' . '<br>' . ' ' . $tab[$id]['sexe'] . ' <br>' . ' ' . $tab[$id]['ville'] . '</p>';
     echo '</div>';
